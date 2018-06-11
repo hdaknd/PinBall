@@ -10,6 +10,9 @@ public class BallController : MonoBehaviour {
         //ゲームオーバを表示するテキスト
         private GameObject gameoverText;
 
+        // ポイント
+        private int score = 0;
+
         // Use this for initialization
         void Start () {
                 //シーン中のGameOverTextオブジェクトを取得
@@ -21,7 +24,7 @@ public class BallController : MonoBehaviour {
                 //ボールが画面外に出た場合
                 if (this.transform.position.z < this.visiblePosZ) {
                         //GameoverTextにゲームオーバを表示
-                        this.gameoverText.GetComponent<Text> ().text = "Game Over";
+                        this.gameoverText.GetComponent<Text> ().text = "Game Over\n Score: " + score;
                 }
         }
 }

@@ -19,7 +19,7 @@ public class BallController : MonoBehaviour {
                 //シーン中のGameOverTextオブジェクトを取得
                 this.gameoverText = GameObject.Find("GameOverText");
                 this.scoreText = GameObject.Find("ScoreText");
-                this.scoreText.GetComponent<Text> ().text = "Score:  " + score + " Pt.";
+                this.scoreText.GetComponent<Text> ().text = "Score: " + score;
 
         }
         
@@ -38,6 +38,6 @@ public class BallController : MonoBehaviour {
                 } else if (other.gameObject.tag == "LargeStarTag" || other.gameObject.tag == "LargeCloudTag") {
                   score += 20;
                 }
-                this.scoreText.GetComponent<Text> ().text = "Score:  " + score + " Pt.";
+                this.scoreText.GetComponent<Text> ().text = "Score: " + score;
         }
 }
